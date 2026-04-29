@@ -1,0 +1,6 @@
+name: VitalityOrbs
+version: '${version}'
+main: com.vitalityorbs.VitalityOrbs
+api-version: '1.21'
+authors: [ ranawise ]
+description: A plugin that drops Vitality Orbs from mobs.

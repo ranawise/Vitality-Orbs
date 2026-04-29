@@ -1,0 +1,9 @@
+drop-chance: 0.05
+
+messages:
+  enabled: true
+  pickup: "&aYou picked up a &6&l{orb}&a!"
+
+orb:
+  display-name: "&6&lVitality Orb"
+  despawn-timer: 30
