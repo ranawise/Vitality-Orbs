@@ -1,23 +1,22 @@
-# VitalityOrbs 🧪
+# VitalityOrbs
 
-A lightweight Paper plugin that adds a "looter" mechanic to mob drops. Mobs have a chance to drop **Vitality Orbs** that provide immediate healing and temporary buffs upon collection.
+A lightweight, high-performance Paper plugin designed for Minecraft 1.21.1. VitalityOrbs introduces a new gameplay mechanic where mobs have a configurable chance to drop Vitality Orbs, providing players with immediate health restoration and tactical movement buffs.
 
----
+## Core Features
 
-## ✨ Features
+* **Procedural Drops**: Mobs drop unique orb entities upon death based on a customizable probability.
+* **Instant Interaction**: Players collect orbs by walking over them, triggering immediate effects without inventory clutter.
+* **Healing Mechanics**: Each orb restores 2 health points (1 full heart) by default.
+* **Tactical Buffs**: Grants a Speed I potion effect for 5 seconds to reward aggressive play.
+* **Visual Feedback**: Utilizes heart and happy-villager particles combined with spatial audio cues for a satisfying collection experience.
+* **Configurable Lifespan**: Orbs automatically despawn after a set period (default 30 seconds) to prevent entity lag.
 
-- **Dynamic Drops**: Mobs drop glowing Nether Stars with a customizable chance.
-- **Immediate Feedback**: Heart particles and level-up sounds when picked up.
-- **Healing & Buffs**: Restores 1 heart (+2 HP) and grants Speed I for 5 seconds.
-- **Configurable**: Change drop rates, despawn timers, and pickup messages.
-- **Performant**: Minimal overhead with optimized task scheduling.
+## Configuration
 
-## ⚙️ Configuration
-
-The `config.yml` allows full control over the orb mechanics:
+The plugin generates a `config.yml` on first run. All values can be modified without a server restart (requires a plugin reload).
 
 ```yaml
-drop-chance: 0.05 # 5% chance
+drop-chance: 0.05
 
 messages:
   enabled: true
@@ -25,28 +24,29 @@ messages:
 
 orb:
   display-name: "&6&lVitality Orb"
-  despawn-timer: 30 # Seconds until orb disappears
+  despawn-timer: 30
 ```
 
-## 🚀 Installation
+## Installation
 
-1. Download the latest `VitalityOrbs.jar`.
-2. Drop it into your server's `plugins` folder.
-3. Restart the server or load the plugin.
-4. Edit `plugins/VitalityOrbs/config.yml` to your liking and reload.
+1. Place the `VitalityOrbs.jar` file into your server's `plugins` directory.
+2. Start the server to generate the default configuration.
+3. Modify `config.yml` in the `plugins/VitalityOrbs/` folder as needed.
+4. Use a plugin manager or restart the server to apply changes.
 
-## 🛠️ Building from Source
+## Development
 
-Requirements:
-- JDK 21
-- Gradle
+Built using Java 21 and the PaperMC API.
+
+### Compilation
+To build the project from source, use the following commands:
 
 ```bash
-git clone https://github.com/ranawise/VitalityOrbs.git
-cd VitalityOrbs
-gradle build
+./gradlew build
 ```
-The compiled JAR will be in `build/libs/`.
+
+The resulting JAR will be located in the `build/libs/` directory.
 
 ---
-*Created by ranawise*
+**Author:** ranawise  
+**Compatibility:** Paper 1.21.1+
